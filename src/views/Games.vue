@@ -65,7 +65,8 @@ export default {
     getPickability(game) {
       const { awayRank, homeRank, spread } = game;
       const rankDelta = awayRank - homeRank;
-      return (Math.abs(rankDelta) > Math.abs(spread) ? rankDelta / spread : spread / rankDelta).toFixed(2);
+      const multiplier = Math.abs(rankDelta) < 1 ? -1 : 1;
+      return ((Math.abs(rankDelta) > Math.abs(spread) ? rankDelta / spread : spread / rankDelta) * multiplier).toFixed(2);
     },
     getSuggestedPick(game, pickability) {
       const { away, home, spread } = game;
