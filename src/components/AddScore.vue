@@ -9,7 +9,7 @@
         <v-form @submit.prevent="update">
           <v-row>
             <v-col cols="6">
-              <v-text-field v-model="away" :label="item.away"></v-text-field>
+              <v-text-field v-model="away" :label="item.away" autofocus></v-text-field>
             </v-col>
             <v-col cols="6">
               <v-text-field v-model="home" :label="item.home"></v-text-field>
@@ -38,8 +38,8 @@ export default {
   },
   data: () => ({
     isOpen: false,
-    away: 0,
-    home: 0,
+    away: '',
+    home: '',
   }),
   methods: {
     close() {
