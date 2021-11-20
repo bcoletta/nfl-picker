@@ -8,6 +8,9 @@
       <v-col cols="6" lg="3">
         <AddGames @update="get" />
       </v-col>
+      <v-col cols="6" lg="3">
+        <CalculateTiebreaker />
+      </v-col>
     </v-row>
     <GamesList :season="season" :week="week" :games="games" @update="get" />
     <PickDiffs :games="games" />
@@ -18,6 +21,7 @@
 import { getGames } from '@/services/api-service';
 import AddGames from '../components/AddGames';
 import AddRankings from '../components/AddRankings';
+import CalculateTiebreaker from '../components/CalculateTiebreaker';
 import GamesList from '@/components/GamesList.vue';
 import PickDiffs from '../components/PickDiffs';
 import SeasonWeekSelect from '../components/SeasonWeekSelect';
@@ -27,6 +31,7 @@ export default {
   components: {
     AddGames,
     AddRankings,
+    CalculateTiebreaker,
     GamesList,
     PickDiffs,
     SeasonWeekSelect,
