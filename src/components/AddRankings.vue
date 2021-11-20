@@ -48,8 +48,6 @@ export default {
   },
   methods: {
     add() {
-      console.log(this.teamJSON)
-      console.log(JSON.parse(JSON.stringify(this.payload)))
       return addRankings(this.payload).then(() => {
         this.isOpen = false;
       });

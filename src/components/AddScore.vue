@@ -47,7 +47,6 @@ export default {
     },
     update() {
       let score = `${this.away}|${this.home}`;
-      console.log(score);
       let payload = {
         season: this.item.season,
         week: this.item.week,
